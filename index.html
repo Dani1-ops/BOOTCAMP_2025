@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniTech</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="imagens/logounipng.png" alt="Logo UniTech">
+    </div>
+    <nav>
+      <ul>
+        <li>Início</li> <!-- fazer com que volte pro inicio com uma rolagem-->
+        <li>Cursos</li> <!-- ir para carousel-->
+        <li>Contato</li> <!-- ir para baixo (criar essa parte) com o contato da unimar tech e insta-->
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <div class="banner-text">
+        <h1>Bem-vindo à UniTech</h1>
+        <p>Os melhores cursos de Tecnologia de Marília</p>
+    </div>
+  </section>
+
+  <main>
+    <h2 class="titulo-principal">Cursos de Tecnologia</h2>
+
+    <!-- carousel principal  -->
+    <section class="carousel">
+
+      <!-- botao para voltar o slide -->
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-container">
+        
+        <article class="curso">
+          <h3>Ciência da Computação</h3>
+          <img src="imagens/cc_curso.jpg" alt="Ciência da Computação">
+          <p>Duração: 4 anos</p>
+          <p>Carga Horária: 3200 horas</p>
+          <p>Período: Noturno</p>
+          <p>Formação: Exatas</p>
+          <button class="btn-info">Mais informações</button>
+          <div class="info">
+            <p>O curso de Ciência da Computação prepara profissionais para atuar em desenvolvimento de software, pesquisa, inteligência artificial e muito mais.</p>
+          </div>
+        </article>
+        
+        <article class="curso">
+          <h3>Análise e Desenvolvimento de Sistemas</h3>
+          <img src="imagens/ads_curso.jpg" alt="ADS">
+          <p>Duração: 2,5 anos</p>
+          <p>Carga Horária: 2000 horas</p>
+          <p>Período: Noturno</p>
+          <p>Formação: Tecnólogo</p>
+          <button class="btn-info">Mais informações</button>
+          <div class="info">
+            <p>Voltado para quem quer entrar rápido no mercado de trabalho, com foco em programação, banco de dados e sistemas web/mobile.</p>
+          </div>
+        </article>
+        
+        <article class="curso">
+          <h3>Inteligência Artificial</h3>
+          <img src="imagens/ia_curso.jpg" alt="Inteligência Artificial">
+          <p>Duração: 2 anos e meio</p>
+          <p>Carga Horária: 2200 horas</p>
+          <p>Inicio: 2026</p>
+          <p>Formação: Exatas</p>
+          <button class="btn-info">Mais informações</button>
+          <div class="info">
+            <p>Curso inovador para formar especialistas em IA, aprendizado de máquina, visão computacional e automação inteligente.</p>
+          </div>
+        </article>
+
+        <article class="curso">
+          <h3>Segurança da Informação</h3>
+          <img src="imagens/si_curso.jpg" alt="Segurança de Informação">
+          <p>Duração: 4 anos</p>
+          <p>Carga Horária: 3200 horas</p>
+          <p>Período: Noturno</p>
+          <p>Formação: Exatas</p>
+          <button class="btn-info">Mais informações</button>
+          <div class="info">
+            <p>Foco em proteção de dados, redes, auditoria e defesa cibernética, formando profissionais para o mercado de segurança digital.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- botao para avançar o slide -->
+      <button class="carousel-btn next">&#10095;</button>
+    </section>
+  </main>
+
+  <section id="pq-unimar"> <!--blocos de info unimar cursos-->
+
+      <h2 class="titulo-pq">Porque escolher a UNIMAR?</h2>
+
+      <div class="pq-cards">
+
+        <div class="card-pq">
+          <img src="imagens/uni.jpg" alt="">
+          <h3>Excelência Acadêmica</h3>
+          <button class="btn-mais">Saiba Mais</button>
+          <div class="saiba-mais">
+            <p>A UNIMAR possui <strong>100%</strong> dos cursos estrelados no Guia das Faculdades. É referência no ensino superior brasileiro, reconhecida pelo MEC com conceitos de excelência em diversos cursos.</p>
+          </div>
+        </div>
+
+        <div class="card-pq">
+          <img src="imagens/uni.jpg" alt="">
+          <h3>Infraestrutura de Ponta</h3>
+          <button class="btn-mais">Saiba Mais</button>
+          <div class="saiba-mais">
+            <p>A Unimar oferece laboratórios modernos e com milhões em investimentos na área da tecnologia com diversos prédios próprios e laboratorios espcializados.</p>
+          </div>
+        </div>
+
+        <div class="card-pq">
+          <img src="imagens/uni.jpg" alt="">
+          <h3>Reconhecimento Nacional</h3>
+          <button class="btn-mais">Saiba Mais</button>
+          <div class="saiba-mais">
+            <p>Com cursos avaliados com notas de excelência pelo MEC e destaque em rankings acadêmicos, a Unimar é uma das principais universidades privadas do estado de São Paulo.</p>
+          </div>
+        </div>
+
+        <div class="card-pq">
+          <img src="imagens/uni.jpg" alt="">
+          <h3>Pesquisa Científica</h3>
+          <button class="btn-mais">Saiba Mais</button>
+          <div class="saiba-mais">
+            <p>A Unimar incentiva a pesquisa e a inovação, promovendo o desenvolvimento científico e tecnológico. Além de oportunidades de intercâmbio e pesquisas.</p>
+          </div>
+        </div>
+
+      </div>
+      
+  </section>
+
+  <section class="blocos">
+
+  </section>
+
+  <section class="contato">
+
+  </section>
+
+
+  <footer>
+    <p>© 2025 UniTech. Todos os direitos reservados para Danilo H. </p>
+  </footer>
+
+  <!-- script do carousel -->
+  <script src="script.js"></script>
+</body>
+</html>
