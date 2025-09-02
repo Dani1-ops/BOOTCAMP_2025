@@ -535,7 +535,7 @@ footer {
 
 /* Seção de Detalhes dos Cursos */
 #detalhe-cursos {
-  background: linear-gradient(135deg, #002b5b 0%, #001c43 100%);
+  background: linear-gradient(135deg, #002b5b 0%, #002b5b 100%);
   padding: 80px 0;
   color: white;
 }

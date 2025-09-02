@@ -79,7 +79,7 @@ function goToDetails(courseIndex) {
 
   if (courseDetails[courseIndex]) {
     // Scroll suave para a seção de detalhes
-    detailsSection.scrollIntoView({ behavior: "smooth" });
+courseDetails[courseIndex].scrollIntoView({ behavior: "smooth", block: "center" });
 
     // Destaca o curso específico (opcional)
     courseDetails.forEach((detail, index) => {
