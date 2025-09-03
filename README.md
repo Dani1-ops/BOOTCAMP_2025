@@ -18,9 +18,3 @@ dark/light mode --azul escuro marinho" btn azul claro
 
 {?}onde me encaixo -- cursos de preferencia da unimar de acordo com areas ((nao me encaixo dem tecnologia)){?}
 
----- usar links sites unimar cursos ----
-
----- adicionar link do curso no carousel
-
--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-
-pelo carousel o usuario seleciona o curso e ele linka com as informações do curso - 1 bloco pra cada curso baseado no: https://oficial.unimar.br/ciberseguranca-e-infraestrutura-de-redes/

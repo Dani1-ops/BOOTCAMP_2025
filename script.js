@@ -103,10 +103,10 @@ slides.forEach((slide, index) => {
   const btnInfo = slide.querySelector(".btn-info");
   const btnDetails = document.createElement("button");
   btnDetails.className = "btn-details";
-  btnDetails.textContent = "Ver detalhes completos";
+  btnDetails.textContent = "Ir para especificações";
   btnDetails.style.cssText = `
         margin-top: 10px;
-        padding: 8px 16px;
+        padding: 8px 24px;
         background: linear-gradient(45deg, #1DA1F2, #00cfff);
         color: white;
         border: none;
@@ -163,7 +163,7 @@ function startAutoPlay() {
     if (!isTransitioning) {
       goToSlide(currentSlide + 1);
     }
-  }, 5000);
+  }, 4000);
 }
 
 function stopAutoPlay() {
