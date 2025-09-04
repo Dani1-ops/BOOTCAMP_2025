@@ -42,7 +42,7 @@ function resetInfos() {
   });
 }
 
-// Eventos dos botões de navegação
+// funções botões de navegação
 prevBtn.addEventListener("click", (e) => {
   e.preventDefault();
   e.stopPropagation();
@@ -175,6 +175,27 @@ function startAutoPlay() {
 function stopAutoPlay() {
   clearInterval(autoPlayInterval);
 }
+
+// Seleciona todos os elementos que terão animação
+const elements = document.querySelectorAll('.animate-on-scroll');
+
+function checkScroll() {
+  const triggerBottom = window.innerHeight * 0.9; // 90% da altura da tela
+
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+
+    if (top < triggerBottom) {
+      el.classList.add('show'); // entra na tela
+    } else {
+      el.classList.remove('show'); // sai da tela
+    }
+  });
+}
+
+// Executa no scroll e no carregamento da página
+window.addEventListener('scroll', checkScroll);
+window.addEventListener('load', checkScroll);
 
 // Pausa o auto-play quando o mouse está sobre o carousel
 const carousel = document.querySelector(".carousel");

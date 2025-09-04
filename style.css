@@ -15,6 +15,17 @@ html {
   scroll-behavior: smooth;
 }
 
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(70px);
+  transition: all 1s ease-out;
+}
+
+.animate-on-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -544,7 +555,7 @@ footer {
 
 .login-section {
   background: linear-gradient (135deg, #002b5b 0%, #001c43 100%);
-  padding: 80px 0;
+  padding: 50px 0px;
   color: white;
   text-align: center;
 }
@@ -578,14 +589,6 @@ footer {
 
 .form-group {
   margin-bottom: 25px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 500;
-  color: #e5e5e5;
-  font-size: 1.1rem;
 }
 
 .form-group input {
