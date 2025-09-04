@@ -822,8 +822,9 @@ footer {
 
 @media (max-width: 480px) {
   .curso {
-    flex: 0 0 100%; /* 1 por tela */
+    flex: 0 0 100%; /* 1 card por vez */
     margin: 0;
+    padding: 15px;
   }
 
   .curso img {
@@ -838,9 +839,13 @@ footer {
     font-size: 0.85rem;
   }
 
+  /* Esconde o bloco curso-info no mobile */
+  .curso-info {
+    display: none;
+  }
+
   .carousel-btn {
     font-size: 1.2rem;
     padding: 20px 5px;
   }
-}
 }
