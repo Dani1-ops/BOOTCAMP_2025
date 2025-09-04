@@ -11,15 +11,14 @@
 
   <header>
     <div class="logo">
-      <img src="imagens/logounipng.png" alt="Logo UniTech">
+      <a href="#banner"><img src="imagens/logounipng.png" alt="Logo UniTech"></a>
     </div>
     <nav>
       <ul>
-        <a href="#banner">
-          <li>Início</li>
-        </a> 
-        <li>Cursos</li> <!-- ir para carousel-->
-        <li>Contato</li> <!-- ir para baixo (criar essa parte) com o contato da unimar tech e insta-->
+        <li><a href="#banner">Início</a></li>
+        <li><a href="#carousel">Cursos</a></li>
+        <li><a href="#pq-unimar">Universo Unimar</a></li> 
+        <li><a href="#login">Login</a></li>
       </ul>
     </nav>
   </header>
@@ -33,15 +32,15 @@
 
   <main>
     <h2 class="titulo-principal">Nossos Cursos de Tecnologia</h2>
-    <p class="subtitulo-cursos">Escolha o curso ideal para sua carreira em tecnologia</p>
+    <p class="subtitulo-cursos">Escolha o curso ideal para sua carreira em tecnologia</p><br>
 
     <!-- carousel principal  -->
-    <section class="carousel">
+    <section class="carousel" id="carousel">
       <!-- botao para voltar o slide -->
       <button class="carousel-btn prev" aria-label="Slide anterior">&#10094;</button>
-      
+      <!-- class geral do carousel -->
       <div class="carousel-container">
-        
+        <!-- class de cada bloco do carousel -->
         <article class="curso">
           <div class="curso-header">
             <h3>Ciência da Computação</h3>
@@ -88,11 +87,11 @@
           <div class="curso-info">
             <div class="info-item">
               <i class="icon">⏱️</i>
-              <span>Duração: 2,5 anos</span>
+              <span>Duração: 3 anos</span>
             </div>
             <div class="info-item">
               <i class="icon">📚</i>
-              <span>Carga Horária: 2000 horas</span>
+              <span>Carga Horária: 2300 horas</span>
             </div>
             <div class="info-item">
               <i class="icon">🌙</i>
@@ -125,15 +124,15 @@
           <div class="curso-info">
             <div class="info-item">
               <i class="icon">⏱️</i>
-              <span>Duração: 2,5 anos</span>
+              <span>Duração: 4 anos</span>
             </div>
             <div class="info-item">
               <i class="icon">📚</i>
-              <span>Carga Horária: 2200 horas</span>
+              <span>Carga Horária: 3200 horas</span>
             </div>
             <div class="info-item">
-              <i class="icon">🚀</i>
-              <span>Início: 2026</span>
+              <i class="icon">🌙</i>
+              <span>Período: Noturno</span>
             </div>
             <div class="info-item">
               <i class="icon">🎯</i>
@@ -156,21 +155,21 @@
         <article class="curso">
           <div class="curso-header">
             <h3>Segurança da Informação</h3>
-            <span class="curso-tipo">Bacharelado</span>
+            <span class="curso-tipo">Tecnólogo</span>
           </div>
           <a href="https://oficial.unimar.br/ciberseguranca-e-infraestrutura-de-redes/"><img src="imagens/si_curso.jpg" alt="Segurança de Informação"></a>
           <div class="curso-info">
             <div class="info-item">
               <i class="icon">⏱️</i>
-              <span>Duração: 4 anos</span>
+              <span>Duração: 3 anos</span>
             </div>
             <div class="info-item">
               <i class="icon">📚</i>
-              <span>Carga Horária: 3200 horas</span>
+              <span>Carga Horária: 2230 horas</span>
             </div>
             <div class="info-item">
-              <i class="icon">🌙</i>
-              <span>Período: Noturno</span>
+              <i class="icon">🚀</i>
+              <span>Inicio: 2026</span>
             </div>
             <div class="info-item">
               <i class="icon">🎯</i>
@@ -345,7 +344,7 @@
     </div>
   </section>
 
-  <section id="pq-unimar">
+  <section id="pq-unimar" ">
 
       <h2 class="titulo-pq">Universo UNIMAR</h2>
 
@@ -404,11 +403,31 @@
       </div>
       
   </section>
+
+  <!-- seção de login -->
+  <section class="login-section" id="login">
+    <div class="login-container">
+      <h2>Área do Aluno</h2>
+      <div class="login-form">
+        <form>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Seu email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" placeholder="Sua senha" required>
+          </div>
+          <button type="submit" class="btn-login">Entrar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <p>© 2025 UniTech. Todos os direitos reservados para Danilo H. </p>
   </footer>
 
-  <!-- script do carousel -->
   <script src="script.js"></script>
 </body>
 </html>

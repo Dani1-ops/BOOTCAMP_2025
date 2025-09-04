@@ -43,11 +43,15 @@ function resetInfos() {
 }
 
 // Eventos dos botões de navegação
-prevBtn.addEventListener("click", () => {
+prevBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
   goToSlide(currentSlide - 1);
 });
 
-nextBtn.addEventListener("click", () => {
+nextBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
   goToSlide(currentSlide + 1);
 });
 
@@ -63,6 +67,8 @@ document.addEventListener("keydown", (e) => {
 // Evento para os botões "Ver detalhes do curso"
 carouselContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("btn-info")) {
+    e.preventDefault();
+    e.stopPropagation();
     const slide = e.target.closest(".curso");
     const info = slide.querySelector(".info");
     const isOpen = info.classList.toggle("show");
@@ -106,9 +112,9 @@ slides.forEach((slide, index) => {
   btnDetails.textContent = "Ir para especificações";
   btnDetails.style.cssText = `
         margin-top: 10px;
-        padding: 8px 24px;
-        background: linear-gradient(45deg, #1DA1F2, #00cfff);
-        color: white;
+        padding: 8px 40px;
+        background-color: #ddd;
+        color: black;
         border: none;
         border-radius: 8px;
         cursor: pointer;
@@ -163,7 +169,7 @@ function startAutoPlay() {
     if (!isTransitioning) {
       goToSlide(currentSlide + 1);
     }
-  }, 4000);
+  }, 6500);
 }
 
 function stopAutoPlay() {

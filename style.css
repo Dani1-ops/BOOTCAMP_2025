@@ -11,7 +11,15 @@ body {
   overflow-x: hidden;
 }
 
-/* Header fixo no topo, com logo e navegação */
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
   width: 100%;
   height: 60px;
@@ -31,6 +39,7 @@ header {
 header .logo img {
   height: 145px;
   width: auto;
+  margin-top: 8px;
 }
 
 header nav ul {
@@ -49,7 +58,6 @@ header nav ul li:hover {
   color: #00cfff;
 }
 
-/* Banner principal com imagem de fundo e texto centralizado */
 .banner {
   width: 100%;
   height: 1000px;
@@ -70,7 +78,7 @@ header nav ul li:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.56);
 }
 
 .banner-text {
@@ -91,7 +99,6 @@ header nav ul li:hover {
   font-weight: 300;
 }
 
-/* Main centralizado com espaçamento */
 main {
   background: linear-gradient(#001c43, #002b5b);
   margin-top: 40px;
@@ -117,11 +124,19 @@ main {
   position: relative;
   width: 85%;
   max-width: 1000px;
+  margin: 0 auto;
   overflow: hidden;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .carousel-container {
@@ -133,6 +148,13 @@ main {
   min-width: 100%;
   padding: 40px;
   text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  flex-shrink: 0;
 }
 
 .curso h3 {
@@ -140,15 +162,79 @@ main {
   margin-bottom: 15px;
   color: #1da1f2;
   font-family: "Orbitron", sans-serif;
+  text-shadow: 0 0 10px rgba(29, 161, 242, 0.3);
 }
 
 .curso p {
-  /* se for colocar ele em caixa criar div para paragrafo */
   margin: 6px 0;
   font-weight: 300;
   color: #e5e5e5;
   margin-left: auto;
   margin-right: auto;
+}
+
+.curso-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-3px);
+  background: rgba(29, 161, 242, 0.1);
+  box-shadow: 0 8px 20px rgba(29, 161, 242, 0.2);
+}
+
+.info-item .icon {
+  font-size: 1.2rem;
+  color: #00cfff;
+  transition: all 0.3s ease;
+}
+
+.info-item:hover .icon {
+  transform: scale(1.2);
+  color: #1da1f2;
+}
+
+.info-item span {
+  color: #e5e5e5;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.curso-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(29, 161, 242, 0.3);
+}
+
+.curso-tipo {
+  background: linear-gradient(135deg, #1da1f2, #00cfff);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .curso img {
@@ -172,8 +258,9 @@ main {
   font-size: 2rem;
   padding: 100px 15px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 100;
   opacity: 0.9;
+  transition: all 0.3s ease;
 }
 
 .carousel-btn:hover {
@@ -181,17 +268,12 @@ main {
   font-size: 2.5rem;
 }
 
-.carousel-btn.prev {
-  left: 15px;
-}
-
-.carousel-btn.next {
-  right: 15px;
-}
+.carousel-btn.prev { left: 15px; }
+.carousel-btn.next { right: 15px; }
 
 /* Botão de informações do carousel */
 .btn-info {
-  margin: 10px;
+  margin: 10px auto;
   padding: 12px 24px;
   background: #007bff;
   color: #fff;
@@ -201,12 +283,7 @@ main {
   font-size: 1rem;
   transition: all 0.3s ease;
   display: block;
-  margin: auto;
-}
-
-.btn-details:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(29, 161, 242, 0.4);
+  z-index: 1;
 }
 
 .btn-info:hover {
@@ -222,9 +299,10 @@ main {
   color: #ddd;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.5s cubic-bezier(0.4, 1.3, 0.5, 1), padding 0.3s;
+  transition: max-height 0.5s ease, padding 0.3s;
   padding: 0 10px;
   opacity: 0.95;
+  z-index: 0;
 }
 
 .info.show {
@@ -232,7 +310,6 @@ main {
   padding: 15px 10px;
 }
 
-/* Seção "Porque escolher a UNIMAR?" */
 #pq-unimar {
   width: 100%;
   background: linear-gradient(180deg, #002b5b, #001c43);
@@ -244,7 +321,6 @@ main {
   align-items: center;
 }
 
-/* Título da seção UNIMAR */
 .titulo-pq {
   font-size: 2.8rem;
   margin-bottom: 40px;
@@ -253,21 +329,17 @@ main {
   color: #ffffff;
   font-family: "Orbitron", sans-serif;
   text-shadow: 0 0 15px rgba(0, 207, 255, 0.8);
-  text-align: center;
 }
 
-/* Container dos cards UNIMAR */
 .pq-cards {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: center;
   gap: 32px;
   width: 100%;
   max-width: 1300px;
 }
 
-/* Card individual UNIMAR */
 .card-pq {
   background-color: #ffffff;
   width: 300px;
@@ -315,7 +387,7 @@ main {
 .saiba-mais {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.95s cubic-bezier(0.4, 1.3, 0.5, 1), padding 0.3s;
+  transition: max-height 0.5s ease, padding 0.3s;
   opacity: 0.95;
   padding: 0 10px;
 }
@@ -331,9 +403,6 @@ main {
   color: #001c43;
 }
 
-
-
-/* Botão "Saiba Mais" dos cards */
 .btn-mais {
   margin-top: auto;
   padding: 12px 24px;
@@ -347,26 +416,6 @@ main {
   display: block;
 }
 
-/* Hover do botão de informações */
-.btn-info:hover {
-  background: #68abee;
-  transform: scale(1.05);
-}
-
-/* Animação global de crescimento para qualquer elemento */
-.anim-grow {
-  transform: scale(0.8);
-  opacity: 0;
-  transition: transform 0.6s cubic-bezier(0.4, 1.3, 0.5, 1),
-    opacity 0.6s cubic-bezier(0.4, 1.3, 0.5, 1);
-}
-
-.anim-grow.visible {
-  transform: scale(1);
-  opacity: 1;
-}
-
-/* Rodapé */
 footer {
   margin-top: 80px;
   padding: 20px;
@@ -376,157 +425,6 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Responsividade para dispositivos móveis */
-@media (max-width: 768px) {
-  .titulo-principal {
-    font-size: 2rem;
-    margin-bottom: 15px;
-  }
-
-  .subtitulo-cursos {
-    font-size: 1rem;
-    margin-bottom: 40px;
-    padding: 0 20px;
-  }
-
-  main {
-    padding: 20px;
-  }
-
-  .carousel {
-    width: 95%;
-    border-radius: 15px;
-  }
-
-  .curso {
-    padding: 25px 20px;
-  }
-
-  .curso-header h3 {
-    font-size: 1.6rem;
-  }
-
-  .curso-tipo {
-    font-size: 0.8rem;
-    padding: 4px 12px;
-  }
-
-  .curso img {
-    width: 85%;
-    max-height: 200px;
-  }
-
-  .curso-info {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin: 20px 0;
-  }
-
-  .info-item {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
-
-  .carousel-btn {
-    padding: 60px 10px;
-    font-size: 1.5rem;
-  }
-
-  .carousel-btn:hover {
-    font-size: 1.8rem;
-  }
-
-  .btn-info {
-    padding: 12px 24px;
-    font-size: 0.9rem;
-  }
-
-  .btn-details {
-    padding: 6px 12px;
-    font-size: 0.8rem;
-  }
-
-  .info.show {
-    max-height: 350px;
-    padding: 15px 10px;
-  }
-
-  .info h4 {
-    font-size: 1rem;
-  }
-
-  .info ul li {
-    font-size: 0.9rem;
-    padding: 6px 0;
-  }
-
-  .carousel-indicators {
-    bottom: 15px;
-    gap: 8px;
-  }
-
-  .indicator {
-    width: 10px;
-    height: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .titulo-principal {
-    font-size: 1.8rem;
-  }
-
-  .subtitulo-cursos {
-    font-size: 0.9rem;
-  }
-
-  .curso {
-    padding: 20px 15px;
-  }
-
-  .curso-header h3 {
-    font-size: 1.4rem;
-  }
-
-  .curso img {
-    width: 90%;
-    max-height: 180px;
-  }
-
-  .info-item {
-    padding: 8px;
-    font-size: 0.85rem;
-  }
-
-  .info-item .icon {
-    font-size: 1rem;
-  }
-
-  .carousel-btn {
-    padding: 50px 8px;
-    font-size: 1.3rem;
-  }
-
-  .btn-info {
-    padding: 10px 20px;
-    font-size: 0.85rem;
-  }
-
-  .btn-details {
-    padding: 5px 10px;
-    font-size: 0.75rem;
-  }
-
-  .info.show {
-    max-height: 300px;
-  }
-
-  .info ul li {
-    font-size: 0.85rem;
-  }
-}
-
-/* Seção de Detalhes dos Cursos */
 #detalhe-cursos {
   background: linear-gradient(135deg, #002b5b 0%, #002b5b 100%);
   padding: 80px 0;
@@ -571,10 +469,9 @@ footer {
   background: rgba(255, 255, 255, 0.08);
   border-radius: 20px;
   padding: 30px;
-  backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
   width: 100%;
 }
 
@@ -628,7 +525,6 @@ footer {
 .detalhe-item:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: translateX(5px);
-  border-color: rgba(29, 161, 242, 0.3);
 }
 
 .detalhe-item h4 {
@@ -646,73 +542,90 @@ footer {
   margin: 0;
 }
 
-/* Responsividade para a seção de detalhes */
-@media (max-width: 768px) {
-  .titulo-detalhes {
-    font-size: 2.2rem;
-  }
-
-  .subtitulo-detalhes {
-    font-size: 1rem;
-    margin-bottom: 40px;
-  }
-
-  .cursos-detalhes {
-    gap: 30px;
-  }
-
-  .detalhe-curso {
-    padding: 25px;
-  }
-
-  .titulo-detalhe {
-    font-size: 1.5rem;
-  }
-
-  .detalhe-item {
-    padding: 15px;
-  }
-
-  .detalhe-item h4 {
-    font-size: 1.1rem;
-  }
-
-  .detalhe-item p {
-    font-size: 0.95rem;
-  }
+.login-section {
+  background: linear-gradient (135deg, #002b5b 0%, #001c43 100%);
+  padding: 80px 0;
+  color: white;
+  text-align: center;
 }
 
-@media (max-width: 480px) {
-  .titulo-detalhes {
-    font-size: 1.8rem;
-  }
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
 
-  .subtitulo-detalhes {
-    font-size: 0.9rem;
-  }
+.login-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
 
-  .detalhe-curso {
-    padding: 20px;
-  }
+.login-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #1da1f2;
+  font-family: "Orbitron", sans-serif;
+}
 
-  .titulo-detalhe {
-    font-size: 1.3rem;
-  }
+.login-form {
+  text-align: left;
+}
 
-  .tipo-curso {
-    font-size: 0.8rem;
-    padding: 6px 16px;
-  }
+.form-group {
+  margin-bottom: 25px;
+}
 
-  .detalhe-item {
-    padding: 12px;
-  }
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #e5e5e5;
+  font-size: 1.1rem;
+}
 
-  .detalhe-item h4 {
-    font-size: 1rem;
-  }
+.form-group input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
 
-  .detalhe-item p {
-    font-size: 0.9rem;
-  }
+.form-group input:focus {
+  outline: none;
+  border-color: #1da1f2;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 20px rgba(29, 161, 242, 0.3);
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-login {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #1da1f2 0%, #00cfff 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(29, 161, 242, 0.5);
 }
