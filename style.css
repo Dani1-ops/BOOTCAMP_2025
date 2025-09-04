@@ -632,3 +632,215 @@ footer {
   transform: translateY(-2px);
   box-shadow: 0 12px 35px rgba(29, 161, 242, 0.5);
 }
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1200px) {
+  .banner {
+    height: 700px;
+  }
+
+  .banner-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+  }
+
+  .titulo-principal {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+
+  .carousel {
+    width: 95%;
+  }
+
+  .curso img {
+    width: 100%;
+    max-height: 250px;
+  }
+
+  .pq-cards {
+    gap: 20px;
+  }
+
+  .card-pq {
+    width: 90%;
+    min-width: unset;
+    height: auto;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+    gap: 15px;
+    font-size: 0.9rem;
+  }
+
+  .banner {
+    height: 500px;
+  }
+
+  .banner-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner-text p {
+    font-size: 0.9rem;
+  }
+
+  .titulo-principal {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .curso img {
+    max-height: 200px;
+  }
+
+  .pq-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-pq {
+    width: 95%;
+  }
+
+  #detalhe-cursos {
+    padding: 40px 20px;
+  }
+
+  .cursos-detalhes {
+    gap: 25px;
+  }
+
+  .detalhe-curso {
+    padding: 20px;
+  }
+
+  .detalhe-item {
+    padding: 15px;
+  }
+
+  .login-container {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    height: 50px;
+    padding: 0 10px;
+  }
+
+  header .logo img {
+    height: 100px;
+  }
+
+  header nav ul {
+    gap: 10px;
+  }
+
+  .banner {
+    height: 350px;
+  }
+
+  .banner-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner-text p {
+    font-size: 0.8rem;
+  }
+
+  .titulo-principal {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .carousel-btn {
+    font-size: 1.2rem;
+    padding: 40px 5px;
+  }
+
+  .curso img {
+    max-height: 150px;
+  }
+
+  .card-pq {
+    padding: 15px;
+    height: auto;
+  }
+
+  .login-container {
+    padding: 20px;
+  }
+
+  .login-container h2 {
+    font-size: 2rem;
+  }
+
+  .form-group input {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+
+  .btn-login {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  /* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1024px) {
+  .curso {
+    flex: 0 0 calc(50% - 20px); /* 2 por tela */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    width: 95%;
+  }
+
+  .curso {
+    flex: 0 0 calc(50% - 15px);
+    padding: 15px;
+  }
+
+  .curso img {
+    max-height: 200px;
+  }
+
+  .carousel-btn {
+    font-size: 1.5rem;
+    padding: 30px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .curso {
+    flex: 0 0 100%; /* 1 por tela */
+    margin: 0;
+  }
+
+  .curso img {
+    max-height: 150px;
+  }
+
+  .curso h3 {
+    font-size: 1.2rem;
+  }
+
+  .curso p {
+    font-size: 0.85rem;
+  }
+
+  .carousel-btn {
+    font-size: 1.2rem;
+    padding: 20px 5px;
+  }
+}
+}
