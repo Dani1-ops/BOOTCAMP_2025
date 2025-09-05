@@ -613,6 +613,44 @@ footer {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.login-map-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px; /* espaço entre login e mapa */
+  padding: 10px;
+}
+
+.login-section {
+  flex: 1;
+  background-color: #001c43;
+  padding: 20px 0px;
+  color: white;
+  text-align: center;
+}
+
+.map {
+  flex: 1;
+  margin-right: 290px;
+  max-width: 600px;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.map:hover {
+  transition: 0.3s ease-in-out; 
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.map h2 {
+  font-family: "Orbitron", sans-serif;
+  background-color: #002b5b;
+}
+
+
 .btn-login {
   width: 100%;
   padding: 15px;
