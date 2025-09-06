@@ -279,8 +279,13 @@ main {
   font-size: 2.5rem;
 }
 
-.carousel-btn.prev { left: 15px; }
-.carousel-btn.next { right: 15px; }
+.carousel-btn.prev {
+  left: 15px;
+}
+
+.carousel-btn.next {
+  right: 15px;
+}
 
 /* Botão de informações do carousel */
 .btn-info {
@@ -617,7 +622,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 10px; /* espaço entre login e mapa */
+  gap: 10px;
+  /* espaço entre login e mapa */
   padding: 10px;
 }
 
@@ -636,11 +642,11 @@ footer {
   height: 450px;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 .map:hover {
-  transition: 0.3s ease-in-out; 
+  transition: 0.3s ease-in-out;
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -649,7 +655,6 @@ footer {
   font-family: "Orbitron", sans-serif;
   background-color: #002b5b;
 }
-
 
 .btn-login {
   width: 100%;
@@ -671,10 +676,10 @@ footer {
   box-shadow: 0 12px 35px rgba(29, 161, 242, 0.5);
 }
 
-  /* ===== RESPONSIVIDADE ===== */
+/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 1024px) {
   .curso {
-    flex: 0 0 calc(50% - 20px); /* 2 por tela */
+    flex: 0 0 calc(50% - 20px);
   }
 }
 
@@ -696,11 +701,28 @@ footer {
     font-size: 1.5rem;
     padding: 30px 10px;
   }
+
+  .login-map-container {
+    display: block;   /* força empilhar */
+  }
+
+  .login-section,
+  .map {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 20px auto; /* centraliza e separa */
+  }
+
+  .map iframe {
+    width: 100%;
+    height: 250px;
+  }
 }
 
 @media (max-width: 480px) {
   .curso {
-    flex: 0 0 100%; /* 1 card por vez */
+    flex: 0 0 100%;
+    /* 1 card por vez */
     margin: 0;
     padding: 15px;
   }
@@ -728,5 +750,36 @@ footer {
   .carousel-btn {
     font-size: 1.2rem;
     padding: 20px 5px;
+  }
+
+  .login-map-container {
+    gap: 15px; /* menos espaço entre os blocos */
+  }
+
+  .login-section {
+    padding: 15px 0;   /* menos espaço vertical */
+  }
+
+  .form-group label {
+    font-size: 0.9rem; /* rótulos menores */
+  }
+
+  .form-group input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .map iframe {
+    height: 200px; /* altura menor em telas muito pequenas */
+  }
+
+  .btn-login {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .form-group input {
+    padding: 10px;
+    font-size: 0.9rem;
   }
 }
