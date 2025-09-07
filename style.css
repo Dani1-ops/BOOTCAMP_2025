@@ -211,17 +211,6 @@ main {
   box-shadow: 0 8px 20px rgba(29, 161, 242, 0.2);
 }
 
-.info-item .icon {
-  font-size: 1.2rem;
-  color: #00cfff;
-  transition: all 0.3s ease;
-}
-
-.info-item:hover .icon {
-  transform: scale(1.2);
-  color: #1da1f2;
-}
-
 .info-item span {
   color: #e5e5e5;
   font-weight: 500;
@@ -623,7 +612,6 @@ footer {
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
-  /* espaço entre login e mapa */
   padding: 10px;
 }
 
@@ -770,7 +758,7 @@ footer {
   }
 
   .map iframe {
-    height: 200px; /* altura menor em telas muito pequenas */
+    height: 200px;
   }
 
   .btn-login {
