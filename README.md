@@ -3,6 +3,7 @@
 ACESSO: https://dani1-ops.github.io/BOOTCAMP_2025
 
 UniTech - Plataforma de Cursos de Tecnologia
+
 🔹 Sobre
 
 O UniTech é um site institucional que apresenta cursos de tecnologia oferecidos pela Universidade de Marília (UNIMAR). O site permite aos usuários explorar informações detalhadas sobre cada curso, eventos e vestibular..
@@ -22,4 +23,5 @@ Google Fonts: Orbitron e Poppins
 🔹 Autor
 
 Danilo H. – Desenvolvedor do projeto UniTech
+
 📍 Marília - SP
